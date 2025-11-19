@@ -1,6 +1,5 @@
-import utils.utils as utils
-from utils.video_utils import create_video_from_intermediate_results
-
+import  utils
+from video_utils import create_video_from_intermediate_results
 import os
 import argparse
 import torch

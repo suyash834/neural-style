@@ -4,19 +4,12 @@ import torch
 from torchvision import transforms
 import os
 import matplotlib.pyplot as plt
-
-
-from models.definitions.vgg_nets import Vgg16, Vgg19, Vgg16Experimental
-
-
+from vgg_nets import Vgg16
 IMAGENET_MEAN_255 = [123.675, 116.28, 103.53]
 IMAGENET_STD_NEUTRAL = [1, 1, 1]
-
-
 #
 # Image manipulation util functions
 #
-
 def load_image(img_path, target_shape=None):
     if not os.path.exists(img_path):
         raise Exception(f'Path does not exist: {img_path}')
